@@ -18,11 +18,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>ReactJS | Imagina Formación</h1>
+      </header>
         <button className={(isLogged?"Vaciar":"Nuevo")}
                 onClick={controlLoggin}>
           {(isLogged?"Log Out":"Log In")}
         </button>
-      </header>
       <div className="App-body">
         <Mensajes />
       </div>
