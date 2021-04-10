@@ -1,0 +1,73 @@
+@import "../styles/colors.scss";
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+    position:fixed;
+    background: white;
+    width: 50%;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.display-block { display: block; }
+.display-none { display: none; }
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botonera2{ display: flex;} 
+form > strong { margin: 10px 10px; } 
+//.Elemento{ margin: 5px 5px; }
+.Elemento[name="descripcion"]{
+    width: 95%;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.Elemento[name="nombre"]{
+    margin-right: 1%;
+    float: left;
+    margin-left: 0px;
+}
+.Elemento[name="mail"]{
+    margin-right: 1%;
+    float: left;
+    margin-left: 0px;
+}
+.firstLine{ width: 95%; }
+[type="submit"], [type="button"]{ float:right; }
+
+.Boton {
+    margin-left: 4px;
+    margin-right: 4px;
+    
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 2px;
+ 
+    color: $light;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.Nuevo { 
+    @extend .Boton;
+    background-color: #469553; 
+}
+.Nuevo:hover { background-color: #336e3d; }
+.Cerrar { 
+    @extend .Boton;
+    background-color: $danger;
+}
+.Cerrar:hover { background-color: $dangerDark; }
