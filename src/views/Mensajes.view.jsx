@@ -5,10 +5,11 @@ import { useState } from 'react';
 import Modal from '../components/Modal/Modal.component';
 import * as Yup from 'yup';
 import { useSelector, useDispatch } from 'react-redux';
-import { borrarMensaje, crearMensaje, leerMsj, vaciarMensajes } from '../index';
+import { borrarMensaje, crearMensaje, leerMsj, vaciarMensajes } from '../redux/actions';
 
 export default function Mensajes(props){
-    const mensajes = useSelector(state => state);  // El estado inicial será '[]'
+    const mensajes = useSelector(state => state.mensajes);  // El estado inicial será '[]'
+    const isLogged = useSelector(state => state.isLogged);
     const dispatch = useDispatch();
     const [showModal,setShowModal] = useState(false);
 
@@ -46,7 +47,7 @@ export default function Mensajes(props){
     });
     
     return (
-        <div className="Mensajes">
+        <div className="Mensajes" style={(isLogged?{}:{display:"none"})}>
             <Modal show={showModal} 
                     handleClose ={setShow} 
                     onSubmit={nuevoMensaje}
