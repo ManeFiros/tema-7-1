@@ -24,6 +24,13 @@
   color: white;
 }
 
+.App>button{
+  position: absolute;
+  top: 4.6vh;
+  right: 10px;
+  font-size: calc(6px + 0.9vmin);
+}
+
 .App-link {
   color: #61dafb;
 }
