@@ -6,12 +6,6 @@ import Modal from '../components/Modal/Modal.component';
 import * as Yup from 'yup';
 import { useSelector, useDispatch } from 'react-redux';
 import { borrarMensaje, crearMensaje, leerMsj, vaciarMensajes } from '../index';
-  // Nos suscribimos a cada cambio que reciba el estado
-  //store.subscribe(() => {
-  //  console.log('🗨 El nuevo estado de nuestra aplicación es... ');
-  //  console.log(store.getState());
-  //});
-  
 
 export default function Mensajes(props){
     const mensajes = useSelector(state => state);  // El estado inicial será '[]'
